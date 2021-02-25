@@ -6,4 +6,5 @@ var handler = function(request, response) {
  response.writeHead(200);
  response.end("You've hit " + os.hostname() + "\n");
 };
-var www = http.createS
+var www = http.createServer(handler);
+www.listen(8080);
